@@ -718,7 +718,7 @@
                 ViewerComponent.prototype.ngOnDestroy = function () { };
                 ViewerComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    this.siteUrl = window.location.origin + '/htmlbin/';
+                    this.siteUrl = window.location.origin + '/';
                     this.errorMessage = null;
                     this.route.paramMap.subscribe(function (params) {
                         _this.fileName = params.get('fileName') && params.get('fileName').length ? params.get('fileName').trim() : '';

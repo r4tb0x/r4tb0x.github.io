@@ -711,7 +711,7 @@ let ViewerComponent = class ViewerComponent {
     }
     ngOnDestroy() { }
     ngOnInit() {
-        this.siteUrl = window.location.origin + '/htmlbin/';
+        this.siteUrl = window.location.origin + '/';
         this.errorMessage = null;
         this.route.paramMap.subscribe(params => {
             this.fileName = params.get('fileName') && params.get('fileName').length ? params.get('fileName').trim() : '';
