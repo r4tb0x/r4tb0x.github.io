@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Upload</h1>\n<p><strong>On-site upload is not supported for this instance.</strong> If you have access to the upload folder of this instance, you can create the encrypted file here and upload it manually.</p>\n<p><em>Please note:</em> Input of the type \"HTML document\" will be displayed window-filling, but not open in a new window or frame. Bootstrap 4 classes can be used for styling.</p>\n<div class=\"row\">\n  <div class=\"col-12\" *ngIf=\"errorMessage\">\n    <div class=\"alert alert-warning\">{{errorMessage}}</div>\n  </div>\n</div>\n<form *ngIf=\"!isDownload\">\n    <div class=\"row mb-3\">\n      <div class=\"col-12\">\n        <div class=\"dropdown d-block d-sm-inline-block mr-3\">\n          <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"showFileDropdown=!showFileDropdown\">\n            {{contentTypeName}}\n          </button>\n          <div class=\"dropdown-menu\" [class.show]=\"showFileDropdown\" aria-labelledby=\"dropdownMenuButton\">\n            <span class=\"dropdown-item\" (click)=\"onFileDropdownSelect('text', 'Text')\">Text</span>\n            <span class=\"dropdown-item\" (click)=\"onFileDropdownSelect('html', 'HTML')\">HTML</span>\n            <span class=\"dropdown-item\" (click)=\"onFileDropdownSelect('document', 'HTML Dokument')\">HTML Document</span>\n          </div>\n        </div>\n\n        <button class=\"btn btn-success my-2 my-sm-0 mr-3\" type=\"button\" (click)=\"onEncrypt()\"\n          [attr.disabled]=\"contentText.length > 0 ? null : ''\">Encrypt</button>\n\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-12\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-6\">\n            <input type=\"text\" class=\"d-block w-100 text-dark bg-light form-control\" name=\"fileName\" [(ngModel)]=\"fileName\" placeholder=\"filename\">\n          </div>\n          <div class=\"col-12 col-sm-6\">\n            <input type=\"password\" class=\"d-block w-100 text-dark bg-light form-control\" name=\"encryptionPassword\" [(ngModel)]=\"encryptionPassword\" placeholder=\"password\">\n          </div>\n          <div class=\"col-12\"><small>Filename and password are optional fields. If left empty, or if the password is shorter than 12 characters, a value will be generated automatically. Use manually set filename and password for readable links.</small></div>\n        </div>\n      </div>\n      <div class=\"col-12\">\n          <textarea class=\"d-block w-100 text-dark bg-light form-control\" style=\"height: 40vh;\" name=\"contentText\" [(ngModel)]=\"contentText\" placeholder=\"content\"></textarea>\n      </div>\n    </div>\n</form>\n<div class=\"row\" *ngIf=\"isDownload\">\n  <div class=\"col-12\">\n    <p class=\"text-center\">\n      <a disabled class=\"btn btn-outline-success my-2 my-sm-0\" type=\"button\" [href]=\"dataURI\" target=\"_blank\" download>Download</a>\n    </p>\n    <p>Please download the encrypted file, name it \"{{fileName}}.json\" and upload it into the uploads directory.</p>\n    <p>You can then open the file using the following link:</p>\n    <p>\n      <span class=\"d-block form-control text-dark bg-light w-100\">{{applicationOrigin}}/htmlbin/#/view/{{fileName}}/{{encryptionPassword}}</span>\n    </p>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Upload</h1>\n<p><strong>On-site upload is not supported for this instance.</strong> If you have access to the upload folder of this instance, you can create the encrypted file here and upload it manually.</p>\n<p><em>Please note:</em> Input of the type \"HTML document\" will be displayed window-filling, but not open in a new window or frame. Bootstrap 4 classes can be used for styling.</p>\n<div class=\"row\">\n  <div class=\"col-12\" *ngIf=\"errorMessage\">\n    <div class=\"alert alert-warning\">{{errorMessage}}</div>\n  </div>\n</div>\n<form *ngIf=\"!isDownload\">\n    <div class=\"row mb-3\">\n      <div class=\"col-12\">\n        <div class=\"dropdown d-block d-sm-inline-block mr-3\">\n          <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"showFileDropdown=!showFileDropdown\">\n            {{contentTypeName}}\n          </button>\n          <div class=\"dropdown-menu\" [class.show]=\"showFileDropdown\" aria-labelledby=\"dropdownMenuButton\">\n            <span class=\"dropdown-item\" (click)=\"onFileDropdownSelect('text', 'Text')\">Text</span>\n            <span class=\"dropdown-item\" (click)=\"onFileDropdownSelect('html', 'HTML')\">HTML</span>\n            <span class=\"dropdown-item\" (click)=\"onFileDropdownSelect('document', 'HTML Dokument')\">HTML Document</span>\n          </div>\n        </div>\n\n        <button class=\"btn btn-success my-2 my-sm-0 mr-3\" type=\"button\" (click)=\"onEncrypt()\"\n          [attr.disabled]=\"contentText.length > 0 ? null : ''\">Encrypt</button>\n\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-12\">\n        <div class=\"row\">\n          <div class=\"col-12 col-sm-6\">\n            <input type=\"text\" class=\"d-block w-100 text-dark bg-light form-control\" name=\"fileName\" [(ngModel)]=\"fileName\" placeholder=\"filename\">\n          </div>\n          <div class=\"col-12 col-sm-6\">\n            <input type=\"password\" class=\"d-block w-100 text-dark bg-light form-control\" name=\"encryptionPassword\" [(ngModel)]=\"encryptionPassword\" placeholder=\"password\">\n          </div>\n          <div class=\"col-12\"><small>Filename and password are optional fields. If left empty, or if the password is shorter than 12 characters, a value will be generated automatically. Use manually set filename and password for readable links.</small></div>\n        </div>\n      </div>\n      <div class=\"col-12 mt-3\">\n          <textarea class=\"d-block w-100 text-dark bg-light form-control\" style=\"height: 40vh;\" name=\"contentText\" [(ngModel)]=\"contentText\" placeholder=\"content\"></textarea>\n      </div>\n    </div>\n</form>\n<div class=\"row\" *ngIf=\"isDownload\">\n  <div class=\"col-12\">\n    <p class=\"text-center\">\n      <a disabled class=\"btn btn-outline-success my-2 my-sm-0\" type=\"button\" [href]=\"dataURI\" target=\"_blank\" download>Download</a>\n    </p>\n    <p>Please download the encrypted file, name it \"{{serverFileName}}.json\" and upload it into the uploads directory.</p>\n    <p>You can then open the file using the following link:</p>\n    <p>\n      <span class=\"d-block form-control text-dark bg-light w-100\">{{applicationOrigin}}/htmlbin/#/view/{{fileName}}/{{encryptionPassword}}</span>\n    </p>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -489,6 +489,12 @@ let EncryptionService = class EncryptionService {
         const cleartext = asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["AES_GCM"].decrypt(encrypted, key, nonce);
         return Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_string"])(cleartext);
     }
+    toServerFileName(fileName) {
+        const hash = new asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["Sha1"]();
+        hash.process(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(fileName));
+        hash.finish();
+        return 'fl' + this.toBase64(hash.result);
+    }
     generateFileName() {
         return Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_hex"])(crypto.getRandomValues(new Uint8Array(8)));
     }
@@ -499,12 +505,13 @@ let EncryptionService = class EncryptionService {
         return b64;
     }
     toBase64(utf8string) {
-        let b64 = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_base64"])(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(utf8string));
+        let b64 = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_base64"])(typeof utf8string === 'string' ? Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(utf8string) : utf8string);
         b64 = b64.replace(/\//g, '-');
         b64 = b64.replace(/\=/g, '_');
-        return b64;
+        return encodeURIComponent(b64);
     }
     fromBase64(base64string) {
+        base64string = decodeURIComponent(base64string);
         base64string = base64string.replace(/\-/g, '/');
         base64string = base64string.replace(/\_/g, '=');
         return Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_string"])(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["base64_to_bytes"])(base64string));
@@ -607,6 +614,7 @@ let UploadComponent = class UploadComponent {
         //fullFileKey: string = '';
         this.encryptionPassword = '';
         this.fileName = '';
+        this.serverFileName = '';
         this.encryptedContent = '';
         this.isDownload = false;
         this.dataURI = null;
@@ -631,6 +639,7 @@ let UploadComponent = class UploadComponent {
             const randomPrefix = ('000' + Math.round(Math.random() * 10000)).slice(-4);
             this.encryptionPassword = this.encryptionPassword && this.encryptionPassword.length > 12 ? this.encryptionPassword : this.encryptionService.generatePassword();
             this.fileName = this.fileName && this.fileName.length ? this.fileName : this.encryptionService.generateFileName();
+            this.serverFileName = this.encryptionService.toServerFileName(this.fileName);
             this.encryptedContent = '{ "type": "' + this.contentType + '", "data": "' + this.encryptionService.encrypt(this.contentText, this.encryptionPassword) + '" }';
             this.dataURI = this.sanitizer.bypassSecurityTrustResourceUrl('data:text/plain;charset=utf-8,' + encodeURIComponent(this.encryptedContent));
             this.applicationOrigin = window.location.origin;
@@ -700,6 +709,7 @@ let ViewerComponent = class ViewerComponent {
         this.sanitizer = sanitizer;
         this.encryptionService = encryptionService;
         this.fileName = '';
+        this.serverFileName = '';
         this.password = '';
         this.decryptedText = '';
         this.fileType = '';
@@ -720,7 +730,7 @@ let ViewerComponent = class ViewerComponent {
                 this.errorMessage = 'Sorry, something went wrong here! Possible reason: broken link.';
             }
             else {
-                this.http.get(this.siteUrl + 'uploads/' + this.fileName + '.json?nocache=' + (new Date().getTime())).subscribe((answer) => {
+                this.http.get(this.siteUrl + 'uploads/' + this.encryptionService.toServerFileName(this.fileName) + '.json?nocache=' + (new Date().getTime())).subscribe((answer) => {
                     if (answer && answer.type && answer.data) {
                         try {
                             this.decryptedText = this.encryptionService.decrypt(answer.data, this.password);
