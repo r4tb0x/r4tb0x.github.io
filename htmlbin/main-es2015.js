@@ -468,6 +468,7 @@ __webpack_require__.r(__webpack_exports__);
 let EncryptionService = class EncryptionService {
     constructor() { }
     encrypt(cleartextString, passphrase) {
+        cleartextString = encodeURIComponent(cleartextString);
         const cleartext = new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(cleartextString));
         const salt = crypto.getRandomValues(new Uint8Array(16));
         const key = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["Pbkdf2HmacSha256"])(new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(passphrase)), salt, 10000, 32);
@@ -487,7 +488,7 @@ let EncryptionService = class EncryptionService {
         const encrypted = new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(cipherObj.ciphertext));
         const key = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["Pbkdf2HmacSha256"])(new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(passphrase)), salt, 10000, 32);
         const cleartext = asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["AES_GCM"].decrypt(encrypted, key, nonce);
-        return Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_string"])(cleartext);
+        return decodeURIComponent(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_string"])(cleartext));
     }
     toServerFileName(fileName) {
         const hash = new asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["Sha1"]();
@@ -646,6 +647,7 @@ let UploadComponent = class UploadComponent {
             this.isDownload = true;
         }
         catch (e) {
+            console.log(e);
             this.errorMessage = 'There was an error during encryption. Please make sure you are using a modern browser like Google Chrome, Firefox or Chromium.';
         }
     }

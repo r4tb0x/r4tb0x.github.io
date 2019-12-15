@@ -498,6 +498,7 @@
                 function EncryptionService() {
                 }
                 EncryptionService.prototype.encrypt = function (cleartextString, passphrase) {
+                    cleartextString = encodeURIComponent(cleartextString);
                     var cleartext = new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(cleartextString));
                     var salt = crypto.getRandomValues(new Uint8Array(16));
                     var key = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["Pbkdf2HmacSha256"])(new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(passphrase)), salt, 10000, 32);
@@ -517,7 +518,7 @@
                     var encrypted = new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(cipherObj.ciphertext));
                     var key = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["Pbkdf2HmacSha256"])(new Uint8Array(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(passphrase)), salt, 10000, 32);
                     var cleartext = asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["AES_GCM"].decrypt(encrypted, key, nonce);
-                    return Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_string"])(cleartext);
+                    return decodeURIComponent(Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_string"])(cleartext));
                 };
                 EncryptionService.prototype.toServerFileName = function (fileName) {
                     var hash = new asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["Sha1"]();
@@ -663,6 +664,7 @@
                         this.isDownload = true;
                     }
                     catch (e) {
+                        console.log(e);
                         this.errorMessage = 'There was an error during encryption. Please make sure you are using a modern browser like Google Chrome, Firefox or Chromium.';
                     }
                 };
