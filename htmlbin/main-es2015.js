@@ -332,6 +332,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'view/:fileName/:password', component: _viewer_viewer_component__WEBPACK_IMPORTED_MODULE_4__["ViewerComponent"] },
+    { path: 'view/:fileName/:password/:showFirst', component: _viewer_viewer_component__WEBPACK_IMPORTED_MODULE_4__["ViewerComponent"] },
     { path: 'upload', component: _upload_upload_component__WEBPACK_IMPORTED_MODULE_5__["UploadComponent"] },
     { path: '', component: _start_start_component__WEBPACK_IMPORTED_MODULE_3__["StartComponent"] }
 ];
@@ -502,8 +503,9 @@ let EncryptionService = class EncryptionService {
     generatePassword() {
         let b64 = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_base64"])(crypto.getRandomValues(new Uint8Array(32)));
         b64 = b64.replace(/\//g, '-');
-        b64 = b64.replace(/\=/g, '_');
-        return b64;
+        b64 = b64.replace(/\=/g, '-');
+        b64 = b64.replace(/\+/g, '-');
+        return encodeURIComponent(b64);
     }
     toBase64(utf8string) {
         let b64 = Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["bytes_to_base64"])(typeof utf8string === 'string' ? Object(asmcrypto_js__WEBPACK_IMPORTED_MODULE_2__["string_to_bytes"])(utf8string) : utf8string);
@@ -677,7 +679,7 @@ UploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".showDocument {\n  position: fixed;\n  width: 100vw;\n  min-height: 100vh;\n  top: 0;\n  bottom: 0;\n  z-index: 9999;\n  opacity: 1;\n  left: 0;\n  right: 0;\n  background: black;\n  padding: 1rem;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlld2VyL3ZpZXdlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsTUFBTTtFQUNOLFNBQVM7RUFDVCxhQUFhO0VBQ2IsVUFBVTtFQUNWLE9BQU87RUFDUCxRQUFRO0VBQ1IsaUJBQWlCO0VBQ2pCLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL3ZpZXdlci92aWV3ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaG93RG9jdW1lbnQge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHdpZHRoOiAxMDB2dztcbiAgbWluLWhlaWdodDogMTAwdmg7XG4gIHRvcDogMDtcbiAgYm90dG9tOiAwO1xuICB6LWluZGV4OiA5OTk5O1xuICBvcGFjaXR5OiAxO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgYmFja2dyb3VuZDogYmxhY2s7XG4gIHBhZGRpbmc6IDFyZW07XG59XG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".showDocument {\n  position: fixed;\n  width: 100vw;\n  min-height: 100vh;\n  top: 0;\n  bottom: 0;\n  z-index: 9999;\n  opacity: 1;\n  left: 0;\n  right: 0;\n  background: black;\n  padding: 1rem;\n  overflow: auto;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlld2VyL3ZpZXdlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsTUFBTTtFQUNOLFNBQVM7RUFDVCxhQUFhO0VBQ2IsVUFBVTtFQUNWLE9BQU87RUFDUCxRQUFRO0VBQ1IsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixjQUFjO0FBQ2hCIiwiZmlsZSI6InNyYy9hcHAvdmlld2VyL3ZpZXdlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNob3dEb2N1bWVudCB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBtaW4taGVpZ2h0OiAxMDB2aDtcbiAgdG9wOiAwO1xuICBib3R0b206IDA7XG4gIHotaW5kZXg6IDk5OTk7XG4gIG9wYWNpdHk6IDE7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBiYWNrZ3JvdW5kOiBibGFjaztcbiAgcGFkZGluZzogMXJlbTtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG4iXX0= */");
 
 /***/ }),
 
@@ -719,6 +721,7 @@ let ViewerComponent = class ViewerComponent {
         this.errorMessage = null;
         this.isLoading = true;
         this.siteUrl = '';
+        this.showFirst = '';
         this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     }
     ngOnDestroy() { }
@@ -726,8 +729,17 @@ let ViewerComponent = class ViewerComponent {
         this.siteUrl = window.location.origin + '/';
         this.errorMessage = null;
         this.route.paramMap.subscribe(params => {
-            this.fileName = params.get('fileName') && params.get('fileName').length ? params.get('fileName').trim() : '';
-            this.password = params.get('password') && params.get('password').length ? params.get('password').trim() : '';
+            const paramfileName = params.get('fileName') && params.get('fileName').length ? params.get('fileName').trim() : '';
+            const parampassword = params.get('password') && params.get('password').length ? params.get('password').trim() : '';
+            const paramshowFirst = params.get('showFirst') && params.get('showFirst').length ? '.showDocument #' + params.get('showFirst').trim() : '.showDocument h1';
+            if (paramfileName === this.fileName && parampassword === this.password && this.decryptedText && this.decryptedText.length > 0) {
+                this.showFirst = paramshowFirst;
+                window['showNewAnchor'](this.showFirst);
+                return;
+            }
+            this.fileName = paramfileName;
+            this.password = parampassword;
+            this.showFirst = paramshowFirst;
             if (!this.fileName || this.fileName.length <= 0 || !this.password || this.password.length <= 0) {
                 this.errorMessage = 'Sorry, something went wrong here! Possible reason: broken link.';
             }
@@ -741,6 +753,12 @@ let ViewerComponent = class ViewerComponent {
                             }
                             this.isLoading = false;
                             this.fileType = answer.type;
+                            const showFirst = this.showFirst;
+                            setTimeout(function () {
+                                if (typeof window['addDocumentTOC'] === 'function') {
+                                    window['addDocumentTOC'](showFirst);
+                                }
+                            }, 100);
                         }
                         catch (e) {
                             this.isLoading = false;

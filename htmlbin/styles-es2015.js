@@ -11,6 +11,17 @@ module.exports = [[module.i, "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com
 
 /***/ }),
 
+/***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/assets/styles/featherlight.min.css":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./src/assets/styles/featherlight.min.css ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [[module.i, "/**\n* Featherlight - ultra slim jQuery lightbox\n* Version 1.7.13 - http://noelboss.github.io/featherlight/\n*\n* Copyright 2018, Noël Raoul Bossart (http://www.noelboss.com)\n* MIT Licensed.\n**/\nhtml.with-featherlight{overflow:hidden}\n.featherlight{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:2147483647;text-align:center;white-space:nowrap;cursor:pointer;background:#333;background:rgba(0,0,0,0)}\n.featherlight:last-of-type{background:rgba(0,0,0,.8)}\n.featherlight:before{content:'';display:inline-block;height:100%;vertical-align:middle}\n.featherlight .featherlight-content{position:relative;text-align:left;vertical-align:middle;display:inline-block;overflow:auto;padding:25px 25px 0;border-bottom:25px solid transparent;margin-left:5%;margin-right:5%;max-height:95%;background:#fff;cursor:auto;white-space:normal}\n.featherlight .featherlight-inner{display:block}\n.featherlight link.featherlight-inner,.featherlight script.featherlight-inner,.featherlight style.featherlight-inner{display:none}\n.featherlight .featherlight-close-icon{position:absolute;z-index:9999;top:0;right:0;line-height:25px;width:25px;cursor:pointer;text-align:center;font-family:Arial,sans-serif;background:#fff;background:rgba(255,255,255,.3);color:#000;border:0;padding:0}\n.featherlight .featherlight-close-icon::-moz-focus-inner{border:0;padding:0}\n.featherlight .featherlight-image{width:100%}\n.featherlight-iframe .featherlight-content{border-bottom:0;padding:0;-webkit-overflow-scrolling:touch}\n.featherlight iframe{border:0}\n.featherlight *{box-sizing:border-box}\n@media only screen and (max-width:1024px){.featherlight .featherlight-content{margin-left:0;margin-right:0;max-height:98%;padding:10px 10px 0;border-bottom:10px solid transparent}}\n@media print{html.with-featherlight>*>:not(.featherlight){display:none}}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hc3NldHMvc3R5bGVzL2ZlYXRoZXJsaWdodC5taW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7RUFNRTtBQUNGLHVCQUF1QixlQUFlO0FBQUMsY0FBYyxZQUFZLENBQUMsY0FBYyxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxrQkFBa0IsQ0FBQyxpQkFBaUIsQ0FBQyxrQkFBa0IsQ0FBQyxjQUFjLENBQUMsZUFBZSxDQUFDLHdCQUF3QjtBQUFDLDJCQUEyQix5QkFBeUI7QUFBQyxxQkFBcUIsVUFBVSxDQUFDLG9CQUFvQixDQUFDLFdBQVcsQ0FBQyxxQkFBcUI7QUFBQyxvQ0FBb0MsaUJBQWlCLENBQUMsZUFBZSxDQUFDLHFCQUFxQixDQUFDLG9CQUFvQixDQUFDLGFBQWEsQ0FBQyxtQkFBbUIsQ0FBQyxvQ0FBb0MsQ0FBQyxjQUFjLENBQUMsZUFBZSxDQUFDLGNBQWMsQ0FBQyxlQUFlLENBQUMsV0FBVyxDQUFDLGtCQUFrQjtBQUFDLGtDQUFrQyxhQUFhO0FBQUMscUhBQXFILFlBQVk7QUFBQyx1Q0FBdUMsaUJBQWlCLENBQUMsWUFBWSxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsZ0JBQWdCLENBQUMsVUFBVSxDQUFDLGNBQWMsQ0FBQyxpQkFBaUIsQ0FBQyw0QkFBNEIsQ0FBQyxlQUFlLENBQUMsK0JBQStCLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxTQUFTO0FBQUMseURBQXlELFFBQVEsQ0FBQyxTQUFTO0FBQUMsa0NBQWtDLFVBQVU7QUFBQywyQ0FBMkMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxnQ0FBZ0M7QUFBQyxxQkFBcUIsUUFBUTtBQUFDLGdCQUF5RSxxQkFBcUI7QUFBQywwQ0FBMEMsb0NBQW9DLGFBQWEsQ0FBQyxjQUFjLENBQUMsY0FBYyxDQUFDLG1CQUFtQixDQUFDLG9DQUFvQyxDQUFDO0FBQUMsYUFBYSw2Q0FBNkMsWUFBWSxDQUFDIiwiZmlsZSI6InNyYy9hc3NldHMvc3R5bGVzL2ZlYXRoZXJsaWdodC5taW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4qIEZlYXRoZXJsaWdodCAtIHVsdHJhIHNsaW0galF1ZXJ5IGxpZ2h0Ym94XG4qIFZlcnNpb24gMS43LjEzIC0gaHR0cDovL25vZWxib3NzLmdpdGh1Yi5pby9mZWF0aGVybGlnaHQvXG4qXG4qIENvcHlyaWdodCAyMDE4LCBOb8OrbCBSYW91bCBCb3NzYXJ0IChodHRwOi8vd3d3Lm5vZWxib3NzLmNvbSlcbiogTUlUIExpY2Vuc2VkLlxuKiovXG5odG1sLndpdGgtZmVhdGhlcmxpZ2h0e292ZXJmbG93OmhpZGRlbn0uZmVhdGhlcmxpZ2h0e2Rpc3BsYXk6bm9uZTtwb3NpdGlvbjpmaXhlZDt0b3A6MDtyaWdodDowO2JvdHRvbTowO2xlZnQ6MDt6LWluZGV4OjIxNDc0ODM2NDc7dGV4dC1hbGlnbjpjZW50ZXI7d2hpdGUtc3BhY2U6bm93cmFwO2N1cnNvcjpwb2ludGVyO2JhY2tncm91bmQ6IzMzMztiYWNrZ3JvdW5kOnJnYmEoMCwwLDAsMCl9LmZlYXRoZXJsaWdodDpsYXN0LW9mLXR5cGV7YmFja2dyb3VuZDpyZ2JhKDAsMCwwLC44KX0uZmVhdGhlcmxpZ2h0OmJlZm9yZXtjb250ZW50OicnO2Rpc3BsYXk6aW5saW5lLWJsb2NrO2hlaWdodDoxMDAlO3ZlcnRpY2FsLWFsaWduOm1pZGRsZX0uZmVhdGhlcmxpZ2h0IC5mZWF0aGVybGlnaHQtY29udGVudHtwb3NpdGlvbjpyZWxhdGl2ZTt0ZXh0LWFsaWduOmxlZnQ7dmVydGljYWwtYWxpZ246bWlkZGxlO2Rpc3BsYXk6aW5saW5lLWJsb2NrO292ZXJmbG93OmF1dG87cGFkZGluZzoyNXB4IDI1cHggMDtib3JkZXItYm90dG9tOjI1cHggc29saWQgdHJhbnNwYXJlbnQ7bWFyZ2luLWxlZnQ6NSU7bWFyZ2luLXJpZ2h0OjUlO21heC1oZWlnaHQ6OTUlO2JhY2tncm91bmQ6I2ZmZjtjdXJzb3I6YXV0bzt3aGl0ZS1zcGFjZTpub3JtYWx9LmZlYXRoZXJsaWdodCAuZmVhdGhlcmxpZ2h0LWlubmVye2Rpc3BsYXk6YmxvY2t9LmZlYXRoZXJsaWdodCBsaW5rLmZlYXRoZXJsaWdodC1pbm5lciwuZmVhdGhlcmxpZ2h0IHNjcmlwdC5mZWF0aGVybGlnaHQtaW5uZXIsLmZlYXRoZXJsaWdodCBzdHlsZS5mZWF0aGVybGlnaHQtaW5uZXJ7ZGlzcGxheTpub25lfS5mZWF0aGVybGlnaHQgLmZlYXRoZXJsaWdodC1jbG9zZS1pY29ue3Bvc2l0aW9uOmFic29sdXRlO3otaW5kZXg6OTk5OTt0b3A6MDtyaWdodDowO2xpbmUtaGVpZ2h0OjI1cHg7d2lkdGg6MjVweDtjdXJzb3I6cG9pbnRlcjt0ZXh0LWFsaWduOmNlbnRlcjtmb250LWZhbWlseTpBcmlhbCxzYW5zLXNlcmlmO2JhY2tncm91bmQ6I2ZmZjtiYWNrZ3JvdW5kOnJnYmEoMjU1LDI1NSwyNTUsLjMpO2NvbG9yOiMwMDA7Ym9yZGVyOjA7cGFkZGluZzowfS5mZWF0aGVybGlnaHQgLmZlYXRoZXJsaWdodC1jbG9zZS1pY29uOjotbW96LWZvY3VzLWlubmVye2JvcmRlcjowO3BhZGRpbmc6MH0uZmVhdGhlcmxpZ2h0IC5mZWF0aGVybGlnaHQtaW1hZ2V7d2lkdGg6MTAwJX0uZmVhdGhlcmxpZ2h0LWlmcmFtZSAuZmVhdGhlcmxpZ2h0LWNvbnRlbnR7Ym9yZGVyLWJvdHRvbTowO3BhZGRpbmc6MDstd2Via2l0LW92ZXJmbG93LXNjcm9sbGluZzp0b3VjaH0uZmVhdGhlcmxpZ2h0IGlmcmFtZXtib3JkZXI6MH0uZmVhdGhlcmxpZ2h0ICp7LXdlYmtpdC1ib3gtc2l6aW5nOmJvcmRlci1ib3g7LW1vei1ib3gtc2l6aW5nOmJvcmRlci1ib3g7Ym94LXNpemluZzpib3JkZXItYm94fUBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDoxMDI0cHgpey5mZWF0aGVybGlnaHQgLmZlYXRoZXJsaWdodC1jb250ZW50e21hcmdpbi1sZWZ0OjA7bWFyZ2luLXJpZ2h0OjA7bWF4LWhlaWdodDo5OCU7cGFkZGluZzoxMHB4IDEwcHggMDtib3JkZXItYm90dG9tOjEwcHggc29saWQgdHJhbnNwYXJlbnR9fUBtZWRpYSBwcmludHtodG1sLndpdGgtZmVhdGhlcmxpZ2h0Pio+Om5vdCguZmVhdGhlcmxpZ2h0KXtkaXNwbGF5Om5vbmV9fVxuIl19 */", '', '']]
+
+/***/ }),
+
 /***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/assets/themes/bootswatch-theme-cyborg.css":
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./src/assets/themes/bootswatch-theme-cyborg.css ***!
@@ -29,7 +40,7 @@ module.exports = [[module.i, "/* homebin bootstrap theme, only slight changes fr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RSIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */", '', '']]
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n/* base styles */\nimg {\n  min-width: initial;\n  max-width: 100%;\n  width: auto;\n\n  min-height: initial;\n  max-height: 100%;\n  height: auto;\n}\nol li {\n  padding-top: .5rem;\n}\n.featherlight-content .TOCHeadLine {\n  display: none;\n}\n.featherlight .featherlight-close-icon {\n  width: 40px;\n  height: 40px;\n  font-size: 36px;\n  background: inherit;\n  color: inherit;\n}\n.fixed-right-button {\n  display: block;\n  position: fixed;\n  float: none;\n\n  right: 12px;\n  width: 40px;\n  height: 40px;\n  background: rgba(0,0,0,0.25);\n  color: white;\n  font-size: 36px;\n  font-size: 28px;\n  text-align: center;\n  line-height: 40px;\n  padding-right: 2px;\n}\n.fixed-right-button:hover {\n  text-decoration: none;\n  color: white;\n}\n.fixed-right-button.open-toc {\n  bottom: 12px;\n}\n#TOC a:not([href]):not([tabindex]),\n.featherlight-content a:not([href]):not([tabindex]){\n  color: #2A9FD6;\n  text-decoration: none;\n  background-color: transparent;\n  cursor: pointer;\n}\n#TOC a:not([href]):not([tabindex]):hover,\n#TOC a:not([href]):not([tabindex]):active,\n#TOC a:not([href]):not([tabindex]):focus,\n.featherlight-content  a:not([href]):not([tabindex]):hover,\n.featherlight-content  a:not([href]):not([tabindex]):active,\n.featherlight-content  a:not([href]):not([tabindex]):focus {\n    color: #1d7097;\n    text-decoration: underline;\n\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RTtBQUM5RSxnQkFBZ0I7QUFDaEI7RUFDRSxrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLFdBQVc7O0VBRVgsbUJBQW1CO0VBQ25CLGdCQUFnQjtFQUNoQixZQUFZO0FBQ2Q7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0UsYUFBYTtBQUNmO0FBQ0E7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGVBQWU7RUFDZixtQkFBbUI7RUFDbkIsY0FBYztBQUNoQjtBQUVBO0VBQ0UsY0FBYztFQUNkLGVBQWU7RUFDZixXQUFXOztFQUVYLFdBQVc7RUFDWCxXQUFXO0VBQ1gsWUFBWTtFQUNaLDRCQUE0QjtFQUM1QixZQUFZO0VBQ1osZUFBZTtFQUNmLGVBQWU7RUFDZixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjtBQUNBO0VBQ0UscUJBQXFCO0VBQ3JCLFlBQVk7QUFDZDtBQUNBO0VBQ0UsWUFBWTtBQUNkO0FBRUE7O0VBRUUsY0FBYztFQUNkLHFCQUFxQjtFQUNyQiw2QkFBNkI7RUFDN0IsZUFBZTtBQUNqQjtBQUNBOzs7Ozs7SUFNSSxjQUFjO0lBQ2QsMEJBQTBCOztBQUU5QiIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbi8qIGJhc2Ugc3R5bGVzICovXG5pbWcge1xuICBtaW4td2lkdGg6IGluaXRpYWw7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgd2lkdGg6IGF1dG87XG5cbiAgbWluLWhlaWdodDogaW5pdGlhbDtcbiAgbWF4LWhlaWdodDogMTAwJTtcbiAgaGVpZ2h0OiBhdXRvO1xufVxuXG5vbCBsaSB7XG4gIHBhZGRpbmctdG9wOiAuNXJlbTtcbn1cblxuLmZlYXRoZXJsaWdodC1jb250ZW50IC5UT0NIZWFkTGluZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG4uZmVhdGhlcmxpZ2h0IC5mZWF0aGVybGlnaHQtY2xvc2UtaWNvbiB7XG4gIHdpZHRoOiA0MHB4O1xuICBoZWlnaHQ6IDQwcHg7XG4gIGZvbnQtc2l6ZTogMzZweDtcbiAgYmFja2dyb3VuZDogaW5oZXJpdDtcbiAgY29sb3I6IGluaGVyaXQ7XG59XG5cbi5maXhlZC1yaWdodC1idXR0b24ge1xuICBkaXNwbGF5OiBibG9jaztcbiAgcG9zaXRpb246IGZpeGVkO1xuICBmbG9hdDogbm9uZTtcblxuICByaWdodDogMTJweDtcbiAgd2lkdGg6IDQwcHg7XG4gIGhlaWdodDogNDBweDtcbiAgYmFja2dyb3VuZDogcmdiYSgwLDAsMCwwLjI1KTtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDM2cHg7XG4gIGZvbnQtc2l6ZTogMjhweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBsaW5lLWhlaWdodDogNDBweDtcbiAgcGFkZGluZy1yaWdodDogMnB4O1xufVxuLmZpeGVkLXJpZ2h0LWJ1dHRvbjpob3ZlciB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgY29sb3I6IHdoaXRlO1xufVxuLmZpeGVkLXJpZ2h0LWJ1dHRvbi5vcGVuLXRvYyB7XG4gIGJvdHRvbTogMTJweDtcbn1cblxuI1RPQyBhOm5vdChbaHJlZl0pOm5vdChbdGFiaW5kZXhdKSxcbi5mZWF0aGVybGlnaHQtY29udGVudCBhOm5vdChbaHJlZl0pOm5vdChbdGFiaW5kZXhdKXtcbiAgY29sb3I6ICMyQTlGRDY7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbiNUT0MgYTpub3QoW2hyZWZdKTpub3QoW3RhYmluZGV4XSk6aG92ZXIsXG4jVE9DIGE6bm90KFtocmVmXSk6bm90KFt0YWJpbmRleF0pOmFjdGl2ZSxcbiNUT0MgYTpub3QoW2hyZWZdKTpub3QoW3RhYmluZGV4XSk6Zm9jdXMsXG4uZmVhdGhlcmxpZ2h0LWNvbnRlbnQgIGE6bm90KFtocmVmXSk6bm90KFt0YWJpbmRleF0pOmhvdmVyLFxuLmZlYXRoZXJsaWdodC1jb250ZW50ICBhOm5vdChbaHJlZl0pOm5vdChbdGFiaW5kZXhdKTphY3RpdmUsXG4uZmVhdGhlcmxpZ2h0LWNvbnRlbnQgIGE6bm90KFtocmVmXSk6bm90KFt0YWJpbmRleF0pOmZvY3VzIHtcbiAgICBjb2xvcjogIzFkNzA5NztcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcblxufVxuIl19 */", '', '']]
 
 /***/ }),
 
@@ -353,6 +364,33 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./src/assets/styles/featherlight.min.css":
+/*!************************************************!*\
+  !*** ./src/assets/styles/featherlight.min.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/src??embedded!./featherlight.min.css */ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/assets/styles/featherlight.min.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+
 /***/ "./src/assets/themes/bootswatch-theme-cyborg.css":
 /*!*******************************************************!*\
   !*** ./src/assets/themes/bootswatch-theme-cyborg.css ***!
@@ -408,15 +446,16 @@ if (content.locals) {
 /***/ }),
 
 /***/ 4:
-/*!**********************************************************************************************************************************!*\
-  !*** multi ./src/styles.css ./node_modules/bootstrap/dist/css/bootstrap.min.css ./src/assets/themes/bootswatch-theme-cyborg.css ***!
-  \**********************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** multi ./src/styles.css ./node_modules/bootstrap/dist/css/bootstrap.min.css ./src/assets/themes/bootswatch-theme-cyborg.css ./src/assets/styles/featherlight.min.css ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/osboxes/Projects/Dev/projects/htmlbin/htmlbin/src/styles.css */"./src/styles.css");
 __webpack_require__(/*! /home/osboxes/Projects/Dev/projects/htmlbin/htmlbin/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! /home/osboxes/Projects/Dev/projects/htmlbin/htmlbin/src/assets/themes/bootswatch-theme-cyborg.css */"./src/assets/themes/bootswatch-theme-cyborg.css");
+__webpack_require__(/*! /home/osboxes/Projects/Dev/projects/htmlbin/htmlbin/src/assets/themes/bootswatch-theme-cyborg.css */"./src/assets/themes/bootswatch-theme-cyborg.css");
+module.exports = __webpack_require__(/*! /home/osboxes/Projects/Dev/projects/htmlbin/htmlbin/src/assets/styles/featherlight.min.css */"./src/assets/styles/featherlight.min.css");
 
 
 /***/ })
